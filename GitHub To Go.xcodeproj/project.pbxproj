@@ -1,0 +1,540 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6B15436D189731A000AF345C /* NAYSideBarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B15436C189731A000AF345C /* NAYSideBarTableViewController.m */; };
+		6B4B86EF1897188A00003270 /* NAYPhoneContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4B86EE1897188A00003270 /* NAYPhoneContentViewController.m */; };
+		6B67A15718970C40006A3310 /* UIColor+Crayola.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B67A15618970C40006A3310 /* UIColor+Crayola.m */; };
+		6BAE38E11896CFCE0035CEB3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BAE38E01896CFCE0035CEB3 /* Foundation.framework */; };
+		6BAE38E31896CFCE0035CEB3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BAE38E21896CFCE0035CEB3 /* CoreGraphics.framework */; };
+		6BAE38E51896CFCE0035CEB3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BAE38E41896CFCE0035CEB3 /* UIKit.framework */; };
+		6BAE38EB1896CFCE0035CEB3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BAE38E91896CFCE0035CEB3 /* InfoPlist.strings */; };
+		6BAE38ED1896CFCE0035CEB3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAE38EC1896CFCE0035CEB3 /* main.m */; };
+		6BAE38F11896CFCE0035CEB3 /* NAYAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAE38F01896CFCE0035CEB3 /* NAYAppDelegate.m */; };
+		6BAE38F41896CFCE0035CEB3 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BAE38F21896CFCE0035CEB3 /* Main_iPhone.storyboard */; };
+		6BAE38F71896CFCE0035CEB3 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BAE38F51896CFCE0035CEB3 /* Main_iPad.storyboard */; };
+		6BAE38FA1896CFCE0035CEB3 /* NAYPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAE38F91896CFCE0035CEB3 /* NAYPadViewController.m */; };
+		6BAE38FD1896CFCE0035CEB3 /* NAYDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAE38FC1896CFCE0035CEB3 /* NAYDetailViewController.m */; };
+		6BAE38FF1896CFCE0035CEB3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BAE38FE1896CFCE0035CEB3 /* Images.xcassets */; };
+		6BAE39061896CFCE0035CEB3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BAE39051896CFCE0035CEB3 /* XCTest.framework */; };
+		6BAE39071896CFCE0035CEB3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BAE38E01896CFCE0035CEB3 /* Foundation.framework */; };
+		6BAE39081896CFCE0035CEB3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BAE38E41896CFCE0035CEB3 /* UIKit.framework */; };
+		6BAE39101896CFCE0035CEB3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BAE390E1896CFCE0035CEB3 /* InfoPlist.strings */; };
+		6BAE39121896CFCE0035CEB3 /* GitHub_To_GoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAE39111896CFCE0035CEB3 /* GitHub_To_GoTests.m */; };
+		6BAE391D1896D30C0035CEB3 /* NAYNetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAE391C1896D30C0035CEB3 /* NAYNetworkController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6BAE39091896CFCE0035CEB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BAE38D51896CFCE0035CEB3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BAE38DC1896CFCE0035CEB3;
+			remoteInfo = "GitHub To Go";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6B15436B189731A000AF345C /* NAYSideBarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAYSideBarTableViewController.h; sourceTree = "<group>"; };
+		6B15436C189731A000AF345C /* NAYSideBarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAYSideBarTableViewController.m; sourceTree = "<group>"; };
+		6B15436E1897360B00AF345C /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		6B4B86ED1897188A00003270 /* NAYPhoneContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAYPhoneContentViewController.h; sourceTree = "<group>"; };
+		6B4B86EE1897188A00003270 /* NAYPhoneContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAYPhoneContentViewController.m; sourceTree = "<group>"; };
+		6B67A15518970C40006A3310 /* UIColor+Crayola.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Crayola.h"; sourceTree = "<group>"; };
+		6B67A15618970C40006A3310 /* UIColor+Crayola.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Crayola.m"; sourceTree = "<group>"; };
+		6BAE38DD1896CFCE0035CEB3 /* GitHub To Go.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GitHub To Go.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BAE38E01896CFCE0035CEB3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6BAE38E21896CFCE0035CEB3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6BAE38E41896CFCE0035CEB3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6BAE38E81896CFCE0035CEB3 /* GitHub To Go-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GitHub To Go-Info.plist"; sourceTree = "<group>"; };
+		6BAE38EA1896CFCE0035CEB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6BAE38EC1896CFCE0035CEB3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6BAE38EE1896CFCE0035CEB3 /* GitHub To Go-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GitHub To Go-Prefix.pch"; sourceTree = "<group>"; };
+		6BAE38EF1896CFCE0035CEB3 /* NAYAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NAYAppDelegate.h; sourceTree = "<group>"; };
+		6BAE38F01896CFCE0035CEB3 /* NAYAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NAYAppDelegate.m; sourceTree = "<group>"; };
+		6BAE38F31896CFCE0035CEB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		6BAE38F61896CFCE0035CEB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		6BAE38F81896CFCE0035CEB3 /* NAYPadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NAYPadViewController.h; sourceTree = "<group>"; };
+		6BAE38F91896CFCE0035CEB3 /* NAYPadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NAYPadViewController.m; sourceTree = "<group>"; };
+		6BAE38FB1896CFCE0035CEB3 /* NAYDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NAYDetailViewController.h; sourceTree = "<group>"; };
+		6BAE38FC1896CFCE0035CEB3 /* NAYDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NAYDetailViewController.m; sourceTree = "<group>"; };
+		6BAE38FE1896CFCE0035CEB3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6BAE39041896CFCE0035CEB3 /* GitHub To GoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GitHub To GoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BAE39051896CFCE0035CEB3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		6BAE390D1896CFCE0035CEB3 /* GitHub To GoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GitHub To GoTests-Info.plist"; sourceTree = "<group>"; };
+		6BAE390F1896CFCE0035CEB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6BAE39111896CFCE0035CEB3 /* GitHub_To_GoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GitHub_To_GoTests.m; sourceTree = "<group>"; };
+		6BAE391B1896D30C0035CEB3 /* NAYNetworkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAYNetworkController.h; sourceTree = "<group>"; };
+		6BAE391C1896D30C0035CEB3 /* NAYNetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAYNetworkController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6BAE38DA1896CFCE0035CEB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BAE38E31896CFCE0035CEB3 /* CoreGraphics.framework in Frameworks */,
+				6BAE38E51896CFCE0035CEB3 /* UIKit.framework in Frameworks */,
+				6BAE38E11896CFCE0035CEB3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BAE39011896CFCE0035CEB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BAE39061896CFCE0035CEB3 /* XCTest.framework in Frameworks */,
+				6BAE39081896CFCE0035CEB3 /* UIKit.framework in Frameworks */,
+				6BAE39071896CFCE0035CEB3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6B67A15818970C49006A3310 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				6B67A15518970C40006A3310 /* UIColor+Crayola.h */,
+				6B67A15618970C40006A3310 /* UIColor+Crayola.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		6B8A358618972E5A0050E16D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6BAE38F21896CFCE0035CEB3 /* Main_iPhone.storyboard */,
+				6BAE38F51896CFCE0035CEB3 /* Main_iPad.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		6BAE38D41896CFCE0035CEB3 = {
+			isa = PBXGroup;
+			children = (
+				6BAE38E61896CFCE0035CEB3 /* GitHub To Go */,
+				6BAE390B1896CFCE0035CEB3 /* GitHub To GoTests */,
+				6BAE38DF1896CFCE0035CEB3 /* Frameworks */,
+				6BAE38DE1896CFCE0035CEB3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6BAE38DE1896CFCE0035CEB3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6BAE38DD1896CFCE0035CEB3 /* GitHub To Go.app */,
+				6BAE39041896CFCE0035CEB3 /* GitHub To GoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6BAE38DF1896CFCE0035CEB3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6BAE38E01896CFCE0035CEB3 /* Foundation.framework */,
+				6BAE38E21896CFCE0035CEB3 /* CoreGraphics.framework */,
+				6BAE38E41896CFCE0035CEB3 /* UIKit.framework */,
+				6BAE39051896CFCE0035CEB3 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6BAE38E61896CFCE0035CEB3 /* GitHub To Go */ = {
+			isa = PBXGroup;
+			children = (
+				6BAE38EF1896CFCE0035CEB3 /* NAYAppDelegate.h */,
+				6BAE38F01896CFCE0035CEB3 /* NAYAppDelegate.m */,
+				6B4B86ED1897188A00003270 /* NAYPhoneContentViewController.h */,
+				6B4B86EE1897188A00003270 /* NAYPhoneContentViewController.m */,
+				6B15436B189731A000AF345C /* NAYSideBarTableViewController.h */,
+				6B15436C189731A000AF345C /* NAYSideBarTableViewController.m */,
+				6BAE38F81896CFCE0035CEB3 /* NAYPadViewController.h */,
+				6BAE38F91896CFCE0035CEB3 /* NAYPadViewController.m */,
+				6BAE38FB1896CFCE0035CEB3 /* NAYDetailViewController.h */,
+				6BAE38FC1896CFCE0035CEB3 /* NAYDetailViewController.m */,
+				6BAE391B1896D30C0035CEB3 /* NAYNetworkController.h */,
+				6BAE391C1896D30C0035CEB3 /* NAYNetworkController.m */,
+				6BAE38FE1896CFCE0035CEB3 /* Images.xcassets */,
+				6B8A358618972E5A0050E16D /* View */,
+				6BAE38E71896CFCE0035CEB3 /* Supporting Files */,
+			);
+			path = "GitHub To Go";
+			sourceTree = "<group>";
+		};
+		6BAE38E71896CFCE0035CEB3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6B67A15818970C49006A3310 /* Categories */,
+				6B15436E1897360B00AF345C /* Constants.h */,
+				6BAE38E81896CFCE0035CEB3 /* GitHub To Go-Info.plist */,
+				6BAE38E91896CFCE0035CEB3 /* InfoPlist.strings */,
+				6BAE38EC1896CFCE0035CEB3 /* main.m */,
+				6BAE38EE1896CFCE0035CEB3 /* GitHub To Go-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6BAE390B1896CFCE0035CEB3 /* GitHub To GoTests */ = {
+			isa = PBXGroup;
+			children = (
+				6BAE39111896CFCE0035CEB3 /* GitHub_To_GoTests.m */,
+				6BAE390C1896CFCE0035CEB3 /* Supporting Files */,
+			);
+			path = "GitHub To GoTests";
+			sourceTree = "<group>";
+		};
+		6BAE390C1896CFCE0035CEB3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6BAE390D1896CFCE0035CEB3 /* GitHub To GoTests-Info.plist */,
+				6BAE390E1896CFCE0035CEB3 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6BAE38DC1896CFCE0035CEB3 /* GitHub To Go */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BAE39151896CFCE0035CEB3 /* Build configuration list for PBXNativeTarget "GitHub To Go" */;
+			buildPhases = (
+				6BAE38D91896CFCE0035CEB3 /* Sources */,
+				6BAE38DA1896CFCE0035CEB3 /* Frameworks */,
+				6BAE38DB1896CFCE0035CEB3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GitHub To Go";
+			productName = "GitHub To Go";
+			productReference = 6BAE38DD1896CFCE0035CEB3 /* GitHub To Go.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6BAE39031896CFCE0035CEB3 /* GitHub To GoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BAE39181896CFCE0035CEB3 /* Build configuration list for PBXNativeTarget "GitHub To GoTests" */;
+			buildPhases = (
+				6BAE39001896CFCE0035CEB3 /* Sources */,
+				6BAE39011896CFCE0035CEB3 /* Frameworks */,
+				6BAE39021896CFCE0035CEB3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6BAE390A1896CFCE0035CEB3 /* PBXTargetDependency */,
+			);
+			name = "GitHub To GoTests";
+			productName = "GitHub To GoTests";
+			productReference = 6BAE39041896CFCE0035CEB3 /* GitHub To GoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6BAE38D51896CFCE0035CEB3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = NAY;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Jeff Schwab";
+				TargetAttributes = {
+					6BAE39031896CFCE0035CEB3 = {
+						TestTargetID = 6BAE38DC1896CFCE0035CEB3;
+					};
+				};
+			};
+			buildConfigurationList = 6BAE38D81896CFCE0035CEB3 /* Build configuration list for PBXProject "GitHub To Go" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6BAE38D41896CFCE0035CEB3;
+			productRefGroup = 6BAE38DE1896CFCE0035CEB3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6BAE38DC1896CFCE0035CEB3 /* GitHub To Go */,
+				6BAE39031896CFCE0035CEB3 /* GitHub To GoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6BAE38DB1896CFCE0035CEB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BAE38F71896CFCE0035CEB3 /* Main_iPad.storyboard in Resources */,
+				6BAE38FF1896CFCE0035CEB3 /* Images.xcassets in Resources */,
+				6BAE38F41896CFCE0035CEB3 /* Main_iPhone.storyboard in Resources */,
+				6BAE38EB1896CFCE0035CEB3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BAE39021896CFCE0035CEB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BAE39101896CFCE0035CEB3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6BAE38D91896CFCE0035CEB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B67A15718970C40006A3310 /* UIColor+Crayola.m in Sources */,
+				6BAE38ED1896CFCE0035CEB3 /* main.m in Sources */,
+				6BAE391D1896D30C0035CEB3 /* NAYNetworkController.m in Sources */,
+				6B15436D189731A000AF345C /* NAYSideBarTableViewController.m in Sources */,
+				6BAE38F11896CFCE0035CEB3 /* NAYAppDelegate.m in Sources */,
+				6BAE38FD1896CFCE0035CEB3 /* NAYDetailViewController.m in Sources */,
+				6BAE38FA1896CFCE0035CEB3 /* NAYPadViewController.m in Sources */,
+				6B4B86EF1897188A00003270 /* NAYPhoneContentViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BAE39001896CFCE0035CEB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BAE39121896CFCE0035CEB3 /* GitHub_To_GoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6BAE390A1896CFCE0035CEB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6BAE38DC1896CFCE0035CEB3 /* GitHub To Go */;
+			targetProxy = 6BAE39091896CFCE0035CEB3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6BAE38E91896CFCE0035CEB3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6BAE38EA1896CFCE0035CEB3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6BAE38F21896CFCE0035CEB3 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6BAE38F31896CFCE0035CEB3 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		6BAE38F51896CFCE0035CEB3 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6BAE38F61896CFCE0035CEB3 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		6BAE390E1896CFCE0035CEB3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6BAE390F1896CFCE0035CEB3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6BAE39131896CFCE0035CEB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6BAE39141896CFCE0035CEB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6BAE39161896CFCE0035CEB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GitHub To Go/GitHub To Go-Prefix.pch";
+				INFOPLIST_FILE = "GitHub To Go/GitHub To Go-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6BAE39171896CFCE0035CEB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GitHub To Go/GitHub To Go-Prefix.pch";
+				INFOPLIST_FILE = "GitHub To Go/GitHub To Go-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6BAE39191896CFCE0035CEB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GitHub To Go.app/GitHub To Go";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GitHub To Go/GitHub To Go-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "GitHub To GoTests/GitHub To GoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		6BAE391A1896CFCE0035CEB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GitHub To Go.app/GitHub To Go";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GitHub To Go/GitHub To Go-Prefix.pch";
+				INFOPLIST_FILE = "GitHub To GoTests/GitHub To GoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6BAE38D81896CFCE0035CEB3 /* Build configuration list for PBXProject "GitHub To Go" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BAE39131896CFCE0035CEB3 /* Debug */,
+				6BAE39141896CFCE0035CEB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BAE39151896CFCE0035CEB3 /* Build configuration list for PBXNativeTarget "GitHub To Go" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BAE39161896CFCE0035CEB3 /* Debug */,
+				6BAE39171896CFCE0035CEB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BAE39181896CFCE0035CEB3 /* Build configuration list for PBXNativeTarget "GitHub To GoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BAE39191896CFCE0035CEB3 /* Debug */,
+				6BAE391A1896CFCE0035CEB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6BAE38D51896CFCE0035CEB3 /* Project object */;
+}
