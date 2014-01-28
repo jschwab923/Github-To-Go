@@ -15,47 +15,25 @@
 @property (weak, nonatomic) IBOutlet UITableView *sidebarTableView;
 @property (nonatomic) UIViewController *currentChildViewController;
 
-@property (nonatomic) NSMutableArray *viewControllers;
+@property (nonatomic) NSArray *viewControllers;
 @property (nonatomic) NSInteger selectedRow;
-@property (nonatomic) NSArray *contentViewIDS;
+
 
 @end
 
 @implementation NAYSideBarTableViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Set default selectedRow to view repo content view on first open
-        self.selectedRow = 0;
-        // Set up array that contains ids of the storyboard files to load
-        // depending on current selectedRow.
-        self.contentViewIDS = @[REPO_CONTENT_VIEW_ID, USER_CONTENT_VIEW_ID];
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    if (!self.currentChildViewController) {
-        
-        self.currentChildViewController = [self.storyboard instantiateViewControllerWithIdentifier:REPO_CONTENT_VIEW_ID];
-        
-        [self addChildViewController:self.currentChildViewController];
-        [self.currentChildViewController .view.layer setShadowOpacity:.5];
-        [self.currentChildViewController didMoveToParentViewController:self];
-        
-        UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(showSidebarWithPan:)];
-        
-        panGestureRecognizer.delegate = self;
-        [self.currentChildViewController.view addGestureRecognizer:panGestureRecognizer];
-    }
-    
+    self.selectedRow = 0;
     [self.sidebarTableView setScrollEnabled:NO];
-    [self.view addSubview:self.currentChildViewController.view];
+    
+    UIViewController *repoContentView = [self.storyboard instantiateViewControllerWithIdentifier:REPO_CONTENT_VIEW_ID];
+    UIViewController *userContentView = [self.storyboard instantiateViewControllerWithIdentifier:USER_CONTENT_VIEW_ID];
+    self.viewControllers = @[repoContentView, userContentView];
+    
+    [self selectChildViewController];
 }
 
 - (void)showSidebarWithPan:(UIPanGestureRecognizer *)panGesture
@@ -91,6 +69,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - UITableViewDelegate Methods
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.selectedRow = indexPath.row;
+    [self selectChildViewController];
+}
+
 
 #pragma mark - Convenience Methods
 - (void)openMenu
@@ -109,6 +94,35 @@
     } completion:^(BOOL finished) {
         
     }];
+}
+
+- (void)selectChildViewController
+{
+    if (self.currentChildViewController) {
+        [self.currentChildViewController.view removeFromSuperview];
+        [self.currentChildViewController removeFromParentViewController];
+    }
+    switch (self.selectedRow) {
+        case 0:
+            self.currentChildViewController = self.viewControllers[0];
+            break;
+        case 1:
+            self.currentChildViewController = self.viewControllers[1];
+            break;
+        default:
+            self.currentChildViewController = self.viewControllers[0];
+            break;
+    }
+    
+    [self addChildViewController:self.currentChildViewController];
+    [self.view addSubview:self.currentChildViewController.view];
+    [self.currentChildViewController.view.layer setShadowOpacity:.5];
+    [self.currentChildViewController didMoveToParentViewController:self];
+    
+    UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(showSidebarWithPan:)];
+    
+    panGestureRecognizer.delegate = self;
+    [self.currentChildViewController.view addGestureRecognizer:panGestureRecognizer];
 }
 
 

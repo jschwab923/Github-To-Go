@@ -203,6 +203,7 @@
                                         <connections>
                                             <outlet property="userImageView" destination="aBA-X7-Ugh" id="Rrm-UY-Qtk"/>
                                             <outlet property="userNameLabel" destination="hte-US-FkV" id="U0m-3j-QOv"/>
+                                            <segue destination="Ah7-4n-0Wa" kind="push" id="4GJ-Li-Ygg"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -269,7 +270,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2734" y="79"/>
+            <point key="canvasLocation" x="2855" y="393"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5Hh-S1-8rL">
@@ -295,4 +296,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="4GJ-Li-Ygg"/>
+    </inferredMetricsTieBreakers>
 </document>
