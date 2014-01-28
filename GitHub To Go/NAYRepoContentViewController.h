@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "NAYSidebarTableViewController.h"
 
-@interface NAYPhoneContentViewController : UIViewController <NAYSideBarTableViewControllerDelegate, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface NAYRepoContentViewController : UIViewController
+<UISearchBarDelegate, UITableViewDataSource>
+
+@property (weak, nonatomic) IBOutlet UITableView *contentTableView;
 
 @end

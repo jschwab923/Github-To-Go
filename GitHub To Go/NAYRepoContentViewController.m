@@ -6,21 +6,21 @@
 //  Copyright (c) 2014 Jeff Schwab. All rights reserved.
 //
 
-#import "NAYPhoneContentViewController.h"
+#import "NAYRepoContentViewController.h"
 #import "NAYNetworkController.h"
 #import "NAYDetailViewController.h"
 
-@interface NAYPhoneContentViewController () 
+@interface NAYRepoContentViewController () 
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
-@property (weak, nonatomic) IBOutlet UITableView *contentTableView;
+
 @property (nonatomic) NSString *searchType;
 @property (nonatomic) NSArray *searchResults;
 
 
 @end
 
-@implementation NAYPhoneContentViewController
+@implementation NAYRepoContentViewController
 
 - (void)viewDidLoad
 {
@@ -31,12 +31,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void)didSelectSidebarItem:(NSString *)title
-{
-    self.searchType = title;
-    self.searchBar.placeholder = [NSString stringWithFormat:@"Search Github %@", self.searchType];
 }
 
 #pragma mark - UITableViewDataSource Methods
@@ -53,7 +47,6 @@
     }
     return cell;
 }
-
 
 #pragma mark - UISearchBarDelegate Methods
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar

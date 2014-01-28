@@ -24,7 +24,19 @@
 
 - (NSArray *)reposForSearchString:(NSString *)searchString
 {
-    searchString = [NSString stringWithFormat:@"https://api.github.com/search/repositories?q=%@", searchString];
+    return [self searchForString:searchString type:@"repositories"];
+}
+
+- (NSArray *)usersForSearchString:(NSString *)searchString
+{
+    return [self searchForString:searchString type:@"users"];
+}
+
+- (NSArray *)searchForString:(NSString *)searchString type:(NSString *)type
+{
+    searchString = [NSString stringWithFormat:@"https://api.github.com/search/%@?q=%@", type, searchString];
+    searchString = [searchString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
     NSURL *searchURL = [NSURL URLWithString:searchString];
     NSData *searchData = [NSData dataWithContentsOfURL:searchURL];
     

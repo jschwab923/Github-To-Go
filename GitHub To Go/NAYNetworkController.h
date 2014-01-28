@@ -13,5 +13,6 @@
 + (NAYNetworkController *)sharedController;
 
 - (NSArray *)reposForSearchString:(NSString *)searchString;
+- (NSArray *)usersForSearchString:(NSString *)searchString;
 
 @end
