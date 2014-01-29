@@ -7,7 +7,14 @@
 //
 
 #import "NAYGitUser.h"
+#import "NAYNetworkController.h"
 
 @implementation NAYGitUser
+
+- (void)downloadUserImage
+{
+    self.imageIsDownloaded = YES;
+    [[NAYNetworkController sharedController] downloadImageDataWithUrl:self.imageURL forUser:self];
+}
 
 @end

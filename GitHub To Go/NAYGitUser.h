@@ -8,10 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NAYGitUser : NSObject
+@interface NAYGitUser : NSObject 
 
 @property (nonatomic) NSString *userName;
-@property (nonatomic) NSString *imageURL;
+@property (nonatomic) NSURL *profileURL;
+@property (nonatomic) NSURL *imageURL;
 @property (nonatomic) UIImage *userImage;
+
+@property (nonatomic) BOOL imageIsDownloaded;
+
+- (void)downloadUserImage;
 
 @end

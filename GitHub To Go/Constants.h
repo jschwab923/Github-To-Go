@@ -12,4 +12,9 @@
 #define REPO_CONTENT_VIEW_ID @"RepoContentView"
 #define USER_CONTENT_VIEW_ID @"UserContentView"
 
+#define IMAGE_DOWNLOADED @"ImageDownloaded"
+#define DOWNLOADED_IMAGE_KEY @"downloadedImage"
+#define USER_IMAGE_SET @"UserImageSet"
+#define USER_KEY @"UserKey"
+
 #endif
