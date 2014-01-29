@@ -11,6 +11,8 @@
 #import "NAYNetworkController.h"
 #import "NAYGitUser.h"
 
+#import "NAYDetailViewController.h"
+
 @interface NAYUserContentViewController ()
 
 @property (weak, nonatomic) IBOutlet UICollectionView *userCollectionView;
@@ -104,7 +106,9 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    
+    NAYDetailViewController *destinationViewController = (NAYDetailViewController *)segue.destinationViewController;
+    NSIndexPath *selectedIndexPath = [[self.userCollectionView indexPathsForSelectedItems] firstObject];
+    destinationViewController.detailItem = self.searchResults[selectedIndexPath.row];
 }
 
 @end
