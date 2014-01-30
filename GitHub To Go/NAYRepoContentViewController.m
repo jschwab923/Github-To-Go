@@ -64,4 +64,10 @@
     detailViewController.detailItem = self.searchResults[indexPath.row];
 }
 
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    self.view.frame = self.parentViewController.view.frame;
+    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+}
+
 @end
