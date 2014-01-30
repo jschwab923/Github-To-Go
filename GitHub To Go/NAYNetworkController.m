@@ -57,15 +57,13 @@
     
     NSURLSessionConfiguration *sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
     
-    NSURLSession *urlSession = [NSURLSession sessionWithConfiguration:sessionConfig delegate:self delegateQueue:nil];
+    NSURLSession *urlSession = [NSURLSession sessionWithConfiguration:sessionConfig delegate:self delegateQueue:[NSOperationQueue mainQueue]];
    
     NSURLSessionDataTask *imageDataTask = [urlSession dataTaskWithURL:imageUrl completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (!error) {
             downloadedImage = [UIImage imageWithData:data];
             user.userImage = downloadedImage;
-            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                [[NSNotificationCenter defaultCenter] postNotificationName:USER_IMAGE_SET object:nil userInfo:@{USER_KEY:user}];
-            }];
+            [[NSNotificationCenter defaultCenter] postNotificationName:USER_IMAGE_SET object:nil userInfo:@{USER_KEY:user}];
         } else {
             NSLog(@"%@", error);
         }

@@ -75,7 +75,7 @@
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         NAYDetailViewController *destinationViewController = (NAYDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
         
-        NSIndexPath *selectedIndexPath = [[self.userCollectionView indexPathsForSelectedItems] firstObject];
+//        NSIndexPath *selectedIndexPath = [[self.userCollectionView indexPathsForSelectedItems] firstObject];
         
         //TODO: Work on selection indication
 //        NAYUserCollectionViewCell *selectedCell = (NAYUserCollectionViewCell *)[self.userCollectionView cellForItemAtIndexPath:selectedIndexPath];
