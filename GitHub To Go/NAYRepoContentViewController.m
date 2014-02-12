@@ -103,7 +103,7 @@
             [self.pastSearchTerms addObject:searchBar.text];
         }
     }
-    
+
     //Retrives the controller to retrieve the data from core data
     [NAYNetworkController sharedController].fetchedResultsControllerRepos.delegate = self;
     
@@ -111,6 +111,7 @@
     [[[NAYNetworkController sharedController] fetchedResultsControllerRepos] performFetch:&fetchError];
 
     [self.contentTableView reloadData];
+
     [searchBar resignFirstResponder];
 }
 
