@@ -8,8 +8,12 @@
 
 #import "NAYNetworkController.h"
 #import "NAYGitUser.h"
+#import "Repo.h"
 
-@interface NAYNetworkController ()
+@interface NAYNetworkController () 
+
+@property (nonatomic) NSManagedObjectContext *managedObjectContext;
+
 
 @end
 
@@ -27,17 +31,17 @@
     return sharedController;
 }
 
-- (NSArray *)reposForSearchString:(NSString *)searchString
+- (void)reposForSearchString:(NSString *)searchString
 {
-    return [self searchForString:searchString type:@"repositories"];
+    [self searchForString:searchString type:@"repositories"];
 }
 
-- (NSArray *)usersForSearchString:(NSString *)searchString
+- (void)usersForSearchString:(NSString *)searchString
 {
-    return [self searchForString:searchString type:@"users"];
+     [self searchForString:searchString type:@"users"];
 }
 
-- (NSArray *)searchForString:(NSString *)searchString type:(NSString *)type
+- (void)searchForString:(NSString *)searchString type:(NSString *)type
 {
     searchString = [NSString stringWithFormat:@"https://api.github.com/search/%@?q=%@", type, searchString];
     searchString = [searchString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
@@ -48,26 +52,104 @@
     NSError *error;
     NSDictionary *searchDictionary = [NSJSONSerialization JSONObjectWithData:searchData options:NSJSONReadingMutableContainers error:&error];
     
-    return searchDictionary[@"items"];
+    //TODO: TESTING CORE DATA
+    // Save repos in core data
+    if ([type isEqualToString:@"repositories"]) {
+        for (NSDictionary *repo in searchDictionary[@"items"]) {
+            NSEntityDescription *entity = [NSEntityDescription entityForName:@"Repo"
+                                                      inManagedObjectContext:self.managedObjectContext];
+            
+            Repo *newRepo = [[Repo alloc] initWithEntity:entity
+                          insertIntoManagedObjectContext:self.managedObjectContext
+                                      withJSONDictionary:repo];
+            NSError *saveError;
+            [newRepo.managedObjectContext save:&saveError];
+            if (saveError) {
+                NSLog(@"%@", [saveError userInfo]);
+            } else {
+                NSLog(@"Core data save success");
+            }
+        }
+    } else {
+        
+    }
 }
 
-- (void)downloadImageDataWithUrl:(NSURL *)imageUrl forUser:(NAYGitUser *)user
+
+
+- (void)downloadImageDataWithUrl:(NSURL *)imageUrl forUser:(NAYGitUser *)user withCompletionBlock:(void (^)(UIImage *))blockName
 {
     __block UIImage *downloadedImage;
     
     NSURLSessionConfiguration *sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
-    
+
     NSURLSession *urlSession = [NSURLSession sessionWithConfiguration:sessionConfig delegate:self delegateQueue:[NSOperationQueue mainQueue]];
    
     NSURLSessionDataTask *imageDataTask = [urlSession dataTaskWithURL:imageUrl completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (!error) {
             downloadedImage = [UIImage imageWithData:data];
             user.userImage = downloadedImage;
-            [[NSNotificationCenter defaultCenter] postNotificationName:USER_IMAGE_SET object:nil userInfo:@{USER_KEY:user}];
         } else {
             NSLog(@"%@", error);
         }
     }];
     [imageDataTask resume];
 }
+
+#pragma mark - Core Data accessor methods
+- (NSManagedObjectContext *)managedObjectContext
+{
+    if (_managedObjectContext) {
+        return _managedObjectContext;
+    }
+    
+    NAYAppDelegate *appDelegate = (NAYAppDelegate *)[UIApplication sharedApplication].delegate;
+    _managedObjectContext = appDelegate.managedObjectContext;
+    
+    return _managedObjectContext;
+}
+
+- (NSFetchedResultsController *)fetchedResultsControllerRepos
+{
+    if (_fetchedResultsControllerRepos) {
+        return _fetchedResultsControllerRepos;
+    }
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Repo"
+                                              inManagedObjectContext:self.managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    [fetchRequest setEntity:entity];
+    
+    NSSortDescriptor *nameSort = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+    NSArray *sortDescriptorArray = @[nameSort];
+    
+    [fetchRequest setSortDescriptors:sortDescriptorArray];
+    
+    NSFetchedResultsController *fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
+    self.fetchedResultsControllerRepos = fetchedResultsController;
+    
+    return _fetchedResultsControllerRepos;
+}
+
+- (NSFetchedResultsController *)fetchedResultsControllerUsers
+{
+    if (_fetchedResultsControllerUsers) {
+        return _fetchedResultsControllerUsers;
+    }
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"User"
+                                              inManagedObjectContext:self.managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    [fetchRequest setFetchBatchSize:20];
+    [fetchRequest setEntity:entity];
+    
+    //    NSSortDescriptor *nameSort = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+    //    NSArray *sortDescriptorArray = @[nameSort];
+    
+    NSFetchedResultsController *fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
+    
+    return fetchedResultsController;
+}
+
+
 @end

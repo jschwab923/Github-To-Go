@@ -13,7 +13,9 @@
 
 - (void)downloadUserImage
 {
-    [[NAYNetworkController sharedController] downloadImageDataWithUrl:self.imageURL forUser:self];
+    [[NAYNetworkController sharedController] downloadImageDataWithUrl:self.imageURL forUser:self withCompletionBlock:^(UIImage *image) {
+        self.userImage = image;
+    }];
 }
 
 @end

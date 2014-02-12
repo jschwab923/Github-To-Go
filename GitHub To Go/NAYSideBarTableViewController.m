@@ -53,6 +53,13 @@
     [panGesture setTranslation:CGPointMake(0, 0) inView:self.view];
     
     if (panGesture.state == UIGestureRecognizerStateEnded) {
+        
+        if (velocity.x > 1200.f) {
+            [self openMenu];
+        } else if (velocity.x <= -1200.f) {
+            [self closeMenu];
+        }
+        
         if (self.currentChildViewController.view.frame.origin.x > self.view.frame.size.width / 3) {
             [self openMenu];
         }
@@ -82,7 +89,7 @@
 {
     [UIView animateWithDuration:.4 animations:^{
         CGPoint finalCenter = CGPointMake(CGRectGetWidth(self.view.frame) + 50,
-                                          self.currentChildViewController.view.center.y);
+                                          self.view.center.y);
         self.currentChildViewController.view.center = finalCenter;
     }];
 }
@@ -90,7 +97,7 @@
 - (void)closeMenu
 {
     [UIView animateWithDuration:.4 delay:0 usingSpringWithDamping:.5 initialSpringVelocity:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        self.currentChildViewController.view.frame = self.currentChildViewController.view.frame;
+        self.currentChildViewController.view.frame = self.view.frame;
     } completion:^(BOOL finished) {
         
     }];

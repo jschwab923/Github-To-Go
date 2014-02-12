@@ -38,8 +38,6 @@
 {
     [super viewDidLoad];
     
-    // Listen for when User finishes setting it's image property after downloaded
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userImageSet:) name:USER_IMAGE_SET object:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -91,7 +89,7 @@
 #pragma mark - UISearchBarDelegate
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
-    self.searchResults = [[NAYNetworkController sharedController] usersForSearchString:searchBar.text];
+//    self.searchResults = [[NAYNetworkController sharedController] usersForSearchString:searchBar.text];
     [self createUsersFromArray:self.searchResults];
     [self.userCollectionView reloadData];
     [self.searchBar resignFirstResponder];
