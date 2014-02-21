@@ -8,12 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol NAYSideBarTableViewControllerDelegate <NSObject>
-
-- (void)didSelectSidebarItem:(NSString *)title;
-
-@end
-
 @interface NAYSideBarTableViewController : UITableViewController <UIGestureRecognizerDelegate>
 
 @end

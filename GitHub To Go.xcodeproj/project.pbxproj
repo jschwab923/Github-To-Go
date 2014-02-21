@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		6B15436D189731A000AF345C /* NAYSideBarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B15436C189731A000AF345C /* NAYSideBarTableViewController.m */; };
-		6B4B86EF1897188A00003270 /* NAYPhoneContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4B86EE1897188A00003270 /* NAYPhoneContentViewController.m */; };
+		6B4B86EF1897188A00003270 /* NAYRepoContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4B86EE1897188A00003270 /* NAYRepoContentViewController.m */; };
 		6B67A15718970C40006A3310 /* UIColor+Crayola.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B67A15618970C40006A3310 /* UIColor+Crayola.m */; };
+		6B743DBE1898513E0078220A /* NAYUserCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B743DBD1898513E0078220A /* NAYUserCollectionViewCell.m */; };
+		6B743DC1189851B80078220A /* NAYUserContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B743DC0189851B80078220A /* NAYUserContentViewController.m */; };
+		6B743DC6189854700078220A /* NAYGitUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B743DC5189854700078220A /* NAYGitUser.m */; };
 		6BAE38E11896CFCE0035CEB3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BAE38E01896CFCE0035CEB3 /* Foundation.framework */; };
 		6BAE38E31896CFCE0035CEB3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BAE38E21896CFCE0035CEB3 /* CoreGraphics.framework */; };
 		6BAE38E51896CFCE0035CEB3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BAE38E41896CFCE0035CEB3 /* UIKit.framework */; };
@@ -43,10 +46,16 @@
 		6B15436B189731A000AF345C /* NAYSideBarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAYSideBarTableViewController.h; sourceTree = "<group>"; };
 		6B15436C189731A000AF345C /* NAYSideBarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAYSideBarTableViewController.m; sourceTree = "<group>"; };
 		6B15436E1897360B00AF345C /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		6B4B86ED1897188A00003270 /* NAYPhoneContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAYPhoneContentViewController.h; sourceTree = "<group>"; };
-		6B4B86EE1897188A00003270 /* NAYPhoneContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAYPhoneContentViewController.m; sourceTree = "<group>"; };
+		6B4B86ED1897188A00003270 /* NAYRepoContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAYRepoContentViewController.h; sourceTree = "<group>"; };
+		6B4B86EE1897188A00003270 /* NAYRepoContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAYRepoContentViewController.m; sourceTree = "<group>"; };
 		6B67A15518970C40006A3310 /* UIColor+Crayola.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Crayola.h"; sourceTree = "<group>"; };
 		6B67A15618970C40006A3310 /* UIColor+Crayola.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Crayola.m"; sourceTree = "<group>"; };
+		6B743DBC1898513E0078220A /* NAYUserCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAYUserCollectionViewCell.h; sourceTree = "<group>"; };
+		6B743DBD1898513E0078220A /* NAYUserCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAYUserCollectionViewCell.m; sourceTree = "<group>"; };
+		6B743DBF189851B80078220A /* NAYUserContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAYUserContentViewController.h; sourceTree = "<group>"; };
+		6B743DC0189851B80078220A /* NAYUserContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAYUserContentViewController.m; sourceTree = "<group>"; };
+		6B743DC4189854700078220A /* NAYGitUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAYGitUser.h; sourceTree = "<group>"; };
+		6B743DC5189854700078220A /* NAYGitUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAYGitUser.m; sourceTree = "<group>"; };
 		6BAE38DD1896CFCE0035CEB3 /* GitHub To Go.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GitHub To Go.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BAE38E01896CFCE0035CEB3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6BAE38E21896CFCE0035CEB3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -106,9 +115,44 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
+		6B743DC2189851E40078220A /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				6B4B86ED1897188A00003270 /* NAYRepoContentViewController.h */,
+				6B4B86EE1897188A00003270 /* NAYRepoContentViewController.m */,
+				6B743DBF189851B80078220A /* NAYUserContentViewController.h */,
+				6B743DC0189851B80078220A /* NAYUserContentViewController.m */,
+				6B15436B189731A000AF345C /* NAYSideBarTableViewController.h */,
+				6B15436C189731A000AF345C /* NAYSideBarTableViewController.m */,
+			);
+			name = iPhone;
+			sourceTree = "<group>";
+		};
+		6B743DC3189852060078220A /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				6BAE38F81896CFCE0035CEB3 /* NAYPadViewController.h */,
+				6BAE38F91896CFCE0035CEB3 /* NAYPadViewController.m */,
+				6BAE38FB1896CFCE0035CEB3 /* NAYDetailViewController.h */,
+				6BAE38FC1896CFCE0035CEB3 /* NAYDetailViewController.m */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		6B743DC7189854780078220A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6B743DC4189854700078220A /* NAYGitUser.h */,
+				6B743DC5189854700078220A /* NAYGitUser.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		6B8A358618972E5A0050E16D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6B743DBC1898513E0078220A /* NAYUserCollectionViewCell.h */,
+				6B743DBD1898513E0078220A /* NAYUserCollectionViewCell.m */,
 				6BAE38F21896CFCE0035CEB3 /* Main_iPhone.storyboard */,
 				6BAE38F51896CFCE0035CEB3 /* Main_iPad.storyboard */,
 			);
@@ -150,17 +194,11 @@
 			children = (
 				6BAE38EF1896CFCE0035CEB3 /* NAYAppDelegate.h */,
 				6BAE38F01896CFCE0035CEB3 /* NAYAppDelegate.m */,
-				6B4B86ED1897188A00003270 /* NAYPhoneContentViewController.h */,
-				6B4B86EE1897188A00003270 /* NAYPhoneContentViewController.m */,
-				6B15436B189731A000AF345C /* NAYSideBarTableViewController.h */,
-				6B15436C189731A000AF345C /* NAYSideBarTableViewController.m */,
-				6BAE38F81896CFCE0035CEB3 /* NAYPadViewController.h */,
-				6BAE38F91896CFCE0035CEB3 /* NAYPadViewController.m */,
-				6BAE38FB1896CFCE0035CEB3 /* NAYDetailViewController.h */,
-				6BAE38FC1896CFCE0035CEB3 /* NAYDetailViewController.m */,
 				6BAE391B1896D30C0035CEB3 /* NAYNetworkController.h */,
 				6BAE391C1896D30C0035CEB3 /* NAYNetworkController.m */,
-				6BAE38FE1896CFCE0035CEB3 /* Images.xcassets */,
+				6B743DC7189854780078220A /* Model */,
+				6B743DC2189851E40078220A /* iPhone */,
+				6B743DC3189852060078220A /* iPad */,
 				6B8A358618972E5A0050E16D /* View */,
 				6BAE38E71896CFCE0035CEB3 /* Supporting Files */,
 			);
@@ -170,6 +208,7 @@
 		6BAE38E71896CFCE0035CEB3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6BAE38FE1896CFCE0035CEB3 /* Images.xcassets */,
 				6B67A15818970C49006A3310 /* Categories */,
 				6B15436E1897360B00AF345C /* Constants.h */,
 				6BAE38E81896CFCE0035CEB3 /* GitHub To Go-Info.plist */,
@@ -298,13 +337,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B67A15718970C40006A3310 /* UIColor+Crayola.m in Sources */,
+				6B743DC1189851B80078220A /* NAYUserContentViewController.m in Sources */,
+				6B743DBE1898513E0078220A /* NAYUserCollectionViewCell.m in Sources */,
 				6BAE38ED1896CFCE0035CEB3 /* main.m in Sources */,
 				6BAE391D1896D30C0035CEB3 /* NAYNetworkController.m in Sources */,
+				6B743DC6189854700078220A /* NAYGitUser.m in Sources */,
 				6B15436D189731A000AF345C /* NAYSideBarTableViewController.m in Sources */,
 				6BAE38F11896CFCE0035CEB3 /* NAYAppDelegate.m in Sources */,
 				6BAE38FD1896CFCE0035CEB3 /* NAYDetailViewController.m in Sources */,
 				6BAE38FA1896CFCE0035CEB3 /* NAYPadViewController.m in Sources */,
-				6B4B86EF1897188A00003270 /* NAYPhoneContentViewController.m in Sources */,
+				6B4B86EF1897188A00003270 /* NAYRepoContentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

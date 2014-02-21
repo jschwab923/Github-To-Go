@@ -7,11 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NAYGitUser.h"
 
-@interface NAYNetworkController : NSObject
+@interface NAYNetworkController : NSObject <NSURLSessionDataDelegate>
 
 + (NAYNetworkController *)sharedController;
 
 - (NSArray *)reposForSearchString:(NSString *)searchString;
+- (NSArray *)usersForSearchString:(NSString *)searchString;
+- (void)downloadImageDataWithUrl:(NSURL *)imageUrl forUser:(NAYGitUser *)user;
 
 @end
