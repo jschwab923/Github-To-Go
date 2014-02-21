@@ -76,7 +76,7 @@
 #pragma mark - UISearchBarDelegate Methods
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
-    self.searchResults = [[NAYNetworkController sharedController] reposForSearchString:searchBar.text];
+//    self.searchResults = [[NAYNetworkController sharedController] reposForSearchString:searchBar.text];
     [searchBar resignFirstResponder];
     [self.tableView reloadData];
 }

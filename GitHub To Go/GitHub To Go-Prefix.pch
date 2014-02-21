@@ -15,4 +15,7 @@
     #import <Foundation/Foundation.h>
     #import "UIColor+Crayola.h"
     #import "Constants.h"
+    #import <CoreData/CoreData.h>
+
+    #import "NAYAppDelegate.h"
 #endif

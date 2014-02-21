@@ -13,8 +13,12 @@
 
 + (NAYNetworkController *)sharedController;
 
-- (NSArray *)reposForSearchString:(NSString *)searchString;
-- (NSArray *)usersForSearchString:(NSString *)searchString;
-- (void)downloadImageDataWithUrl:(NSURL *)imageUrl forUser:(NAYGitUser *)user;
+- (void)reposForSearchString:(NSString *)searchString;
+- (void)usersForSearchString:(NSString *)searchString;
+- (void)downloadImageDataWithUrl:(NSURL *)imageUrl forUser:(NAYGitUser *)user withCompletionBlock:(void (^)(UIImage *image))blockName;
+
+@property (nonatomic) NSFetchedResultsController *fetchedResultsControllerRepos;
+@property (nonatomic) NSFetchedResultsController *fetchedResultsControllerUsers;
+
 
 @end

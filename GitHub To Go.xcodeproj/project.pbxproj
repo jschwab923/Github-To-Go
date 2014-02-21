@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B12C71E18AAAADC00DD1FA7 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6B12C71C18AAAADC00DD1FA7 /* Model.xcdatamodeld */; };
+		6B12C72018AAAB5600DD1FA7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B12C71F18AAAB5600DD1FA7 /* CoreData.framework */; };
+		6B12C72318AAAD3D00DD1FA7 /* Repo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B12C72218AAAD3D00DD1FA7 /* Repo.m */; };
 		6B15436D189731A000AF345C /* NAYSideBarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B15436C189731A000AF345C /* NAYSideBarTableViewController.m */; };
 		6B4B86EF1897188A00003270 /* NAYRepoContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4B86EE1897188A00003270 /* NAYRepoContentViewController.m */; };
 		6B67A15718970C40006A3310 /* UIColor+Crayola.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B67A15618970C40006A3310 /* UIColor+Crayola.m */; };
@@ -43,6 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6B12C71D18AAAADC00DD1FA7 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		6B12C71F18AAAB5600DD1FA7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		6B12C72118AAAD3D00DD1FA7 /* Repo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Repo.h; sourceTree = "<group>"; };
+		6B12C72218AAAD3D00DD1FA7 /* Repo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Repo.m; sourceTree = "<group>"; };
 		6B15436B189731A000AF345C /* NAYSideBarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAYSideBarTableViewController.h; sourceTree = "<group>"; };
 		6B15436C189731A000AF345C /* NAYSideBarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAYSideBarTableViewController.m; sourceTree = "<group>"; };
 		6B15436E1897360B00AF345C /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -87,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B12C72018AAAB5600DD1FA7 /* CoreData.framework in Frameworks */,
 				6BAE38E31896CFCE0035CEB3 /* CoreGraphics.framework in Frameworks */,
 				6BAE38E51896CFCE0035CEB3 /* UIKit.framework in Frameworks */,
 				6BAE38E11896CFCE0035CEB3 /* Foundation.framework in Frameworks */,
@@ -140,6 +148,8 @@
 		6B743DC7189854780078220A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6B12C72118AAAD3D00DD1FA7 /* Repo.h */,
+				6B12C72218AAAD3D00DD1FA7 /* Repo.m */,
 				6B743DC4189854700078220A /* NAYGitUser.h */,
 				6B743DC5189854700078220A /* NAYGitUser.m */,
 			);
@@ -179,6 +189,7 @@
 		6BAE38DF1896CFCE0035CEB3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6B12C71F18AAAB5600DD1FA7 /* CoreData.framework */,
 				6BAE38E01896CFCE0035CEB3 /* Foundation.framework */,
 				6BAE38E21896CFCE0035CEB3 /* CoreGraphics.framework */,
 				6BAE38E41896CFCE0035CEB3 /* UIKit.framework */,
@@ -190,6 +201,7 @@
 		6BAE38E61896CFCE0035CEB3 /* GitHub To Go */ = {
 			isa = PBXGroup;
 			children = (
+				6B12C71C18AAAADC00DD1FA7 /* Model.xcdatamodeld */,
 				6BAE38EF1896CFCE0035CEB3 /* NAYAppDelegate.h */,
 				6BAE38F01896CFCE0035CEB3 /* NAYAppDelegate.m */,
 				6BAE391B1896D30C0035CEB3 /* NAYNetworkController.h */,
@@ -339,6 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B12C72318AAAD3D00DD1FA7 /* Repo.m in Sources */,
 				6B67A15718970C40006A3310 /* UIColor+Crayola.m in Sources */,
 				6B743DC1189851B80078220A /* NAYUserContentViewController.m in Sources */,
 				6B743DBE1898513E0078220A /* NAYUserCollectionViewCell.m in Sources */,
@@ -350,6 +363,7 @@
 				6BAE38FD1896CFCE0035CEB3 /* NAYDetailViewController.m in Sources */,
 				6BAE38FA1896CFCE0035CEB3 /* NAYPadViewController.m in Sources */,
 				6B4B86EF1897188A00003270 /* NAYRepoContentViewController.m in Sources */,
+				6B12C71E18AAAADC00DD1FA7 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,6 +604,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6B12C71C18AAAADC00DD1FA7 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6B12C71D18AAAADC00DD1FA7 /* Model.xcdatamodel */,
+			);
+			currentVersion = 6B12C71D18AAAADC00DD1FA7 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6BAE38D51896CFCE0035CEB3 /* Project object */;
 }
