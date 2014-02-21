@@ -52,22 +52,35 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NAYUserCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UserCell" forIndexPath:indexPath];
-    cell.userImageView.image = nil;
-    cell.backgroundColor = [UIColor colorWithRed:0.033 green:0.798 blue:1.000 alpha:1.000];
-    if (self.users) {
-        NAYGitUser *currentUserForCell = self.users[indexPath.row];
-        cell.userNameLabel.text = currentUserForCell.userName;
-        if (!currentUserForCell.imageIsDownloaded){
-            
+    
+    NAYGitUser *currentUserForCell = self.users[indexPath.row];
+    cell.userNameLabel.text = currentUserForCell.userName;
+    if (currentUserForCell.userImage){
+        
+        cell.userImageView.image = currentUserForCell.userImage;
+        
+    } else {
+        NSOperationQueue *backgroundQueue = [NSOperationQueue new];
+        [backgroundQueue addOperationWithBlock:^{
             [currentUserForCell downloadUserImage];
-            
-        } else if (currentUserForCell.userImage) {
-            
-            cell.userImageView.image = currentUserForCell.userImage;
-            
-        }
+        }];
     }
+    
     return cell;
+}
+
+// For iPad with split view controller
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        NAYDetailViewController *destinationViewController = (NAYDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+        
+//        NSIndexPath *selectedIndexPath = [[self.userCollectionView indexPathsForSelectedItems] firstObject];
+        
+        //TODO: Work on selection indication
+//        NAYUserCollectionViewCell *selectedCell = (NAYUserCollectionViewCell *)[self.userCollectionView cellForItemAtIndexPath:selectedIndexPath];
+            destinationViewController.detailItem = self.searchResults[indexPath.row];
+    }
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -101,14 +114,23 @@
 #pragma mark - Notification Center Methods
 - (void)userImageSet:(id)sender
 {
-    [self.userCollectionView reloadData];
+    NAYGitUser *updatedUser = [[sender userInfo] objectForKey:USER_KEY];
+    NSInteger cellRow = [self.users indexOfObject:updatedUser];
+    NSIndexPath *cellPath = [NSIndexPath indexPathForRow:cellRow inSection:0];
+    [self.userCollectionView reloadItemsAtIndexPaths:@[cellPath]];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     NAYDetailViewController *destinationViewController = (NAYDetailViewController *)segue.destinationViewController;
     NSIndexPath *selectedIndexPath = [[self.userCollectionView indexPathsForSelectedItems] firstObject];
+    
     destinationViewController.detailItem = self.searchResults[selectedIndexPath.row];
+}
+
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    self.view.frame = self.parentViewController.view.frame;
 }
 
 @end

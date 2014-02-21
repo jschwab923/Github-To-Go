@@ -9,6 +9,10 @@
 #import "NAYNetworkController.h"
 #import "NAYGitUser.h"
 
+@interface NAYNetworkController ()
+
+@end
+
 @implementation NAYNetworkController
 
 + (NAYNetworkController *)sharedController
@@ -52,13 +56,9 @@
     __block UIImage *downloadedImage;
     
     NSURLSessionConfiguration *sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
-    sessionConfig.allowsCellularAccess = YES;
-    sessionConfig.timeoutIntervalForRequest = 30.0;
-    sessionConfig.timeoutIntervalForResource = 60.0;
-    sessionConfig.HTTPMaximumConnectionsPerHost = 1;
     
-    NSURLSession *urlSession = [NSURLSession sessionWithConfiguration:sessionConfig delegate:self delegateQueue:nil];
-    
+    NSURLSession *urlSession = [NSURLSession sessionWithConfiguration:sessionConfig delegate:self delegateQueue:[NSOperationQueue mainQueue]];
+   
     NSURLSessionDataTask *imageDataTask = [urlSession dataTaskWithURL:imageUrl completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (!error) {
             downloadedImage = [UIImage imageWithData:data];

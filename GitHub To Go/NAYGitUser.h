@@ -15,8 +15,6 @@
 @property (nonatomic) NSURL *imageURL;
 @property (nonatomic) UIImage *userImage;
 
-@property (nonatomic) BOOL imageIsDownloaded;
-
 - (void)downloadUserImage;
 
 @end

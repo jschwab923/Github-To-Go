@@ -90,7 +90,7 @@
 - (void)closeMenu
 {
     [UIView animateWithDuration:.4 delay:0 usingSpringWithDamping:.5 initialSpringVelocity:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        self.currentChildViewController.view.frame = self.view.frame;
+        self.currentChildViewController.view.frame = self.currentChildViewController.view.frame;
     } completion:^(BOOL finished) {
         
     }];
@@ -124,6 +124,5 @@
     panGestureRecognizer.delegate = self;
     [self.currentChildViewController.view addGestureRecognizer:panGestureRecognizer];
 }
-
 
 @end

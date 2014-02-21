@@ -13,7 +13,6 @@
 
 - (void)downloadUserImage
 {
-    self.imageIsDownloaded = YES;
     [[NAYNetworkController sharedController] downloadImageDataWithUrl:self.imageURL forUser:self];
 }
 
